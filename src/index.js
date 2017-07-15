@@ -8,7 +8,7 @@ const random = (number) => {
   if (!number) return getRandomItem()
 
   const randomItem = []
-  for (let i = 1; i < number; i++ ) {
+  for (let i = 2; i < number; i++ ) {
     randomItem.push(getRandomItem())
   }
   return randomItem
