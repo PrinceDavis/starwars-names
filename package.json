@@ -31,10 +31,16 @@
     "chai": "4.1.0",
     "commitizen": "2.9.6",
     "cz-conventional-changelog": "2.0.0",
+    "husky": "0.14.3",
     "mocha": "3.4.2",
     "semantic-release": "^6.3.6"
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
+  },
+  "config": {
+    "husky": {
+      "pre-commit": "npm run test:single"
+    }
   }
 }
