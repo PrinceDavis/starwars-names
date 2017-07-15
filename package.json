@@ -5,8 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "commit": "git-cz",
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "test": "mocha src/index.test.js -w",
-    "test-single": "mocha src/index.test.js",
+    "test-single": "nyc mocha src/index.test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "precommit": "npm run test-single"
   },
@@ -33,7 +34,9 @@
     "commitizen": "2.9.6",
     "cz-conventional-changelog": "2.0.0",
     "husky": "0.14.3",
+    "istanbul": "0.4.5",
     "mocha": "3.4.2",
+    "nyc": "11.0.3",
     "semantic-release": "^6.3.6"
   },
   "czConfig": {
